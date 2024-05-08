@@ -1,20 +1,21 @@
-# gym-aloha
+# gym-stompy
 
-A gym environment for ALOHA
+A gym environment for Stompy
 
-<img src="http://remicadene.com/assets/gif/aloha_act.gif" width="50%" alt="ACT policy on ALOHA env"/>
-
+<!-- <img src="http://remicadene.com/assets/gif/aloha_act.gif" width="50%" alt="ACT policy on ALOHA env"/> -->
 
 ## Installation
 
 Create a virtual environment with Python 3.10 and activate it, e.g. with [`miniconda`](https://docs.anaconda.com/free/miniconda/index.html):
+
 ```bash
 conda create -y -n aloha python=3.10 && conda activate aloha
 ```
 
-Install gym-aloha:
+Install `gym-stompy`:
+
 ```bash
-pip install gym-aloha
+pip install gym-stompy
 ```
 
 
@@ -25,9 +26,9 @@ pip install gym-aloha
 import imageio
 import gymnasium as gym
 import numpy as np
-import gym_aloha
+import gym_stompy
 
-env = gym.make("gym_aloha/AlohaInsertion-v0")
+env = gym.make("gym_stompy/AlohaInsertion-v0")
 observation, info = env.reset()
 frames = []
 

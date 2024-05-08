@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "gym_aloha/**"
+      - "gym_stompy/**"
       - "tests/**"
       - "examples.py"
       - ".github/**"
@@ -14,7 +14,7 @@ on:
     branches:
       - main
     paths:
-      - "gym_aloha/**"
+      - "gym_stompy/**"
       - "tests/**"
       - "examples.py"
       - ".github/**"
