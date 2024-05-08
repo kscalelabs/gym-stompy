@@ -31,7 +31,7 @@ Observation space: {"qpos": Concat[ left_arm_qpos (6),         # absolute joint 
 """
 
 
-class BimanualViperXTask(base.Task):
+class BimanualStompyTask(base.Task):
     def __init__(self, random=None):
         super().__init__(random=random)
 
@@ -100,7 +100,7 @@ class BimanualViperXTask(base.Task):
         raise NotImplementedError
 
 
-class TransferCubeTask(BimanualViperXTask):
+class TransferCubeTask(BimanualStompyTask):
     def __init__(self, random=None):
         super().__init__(random=random)
         self.max_reward = 4
@@ -149,7 +149,7 @@ class TransferCubeTask(BimanualViperXTask):
         return reward
 
 
-class InsertionTask(BimanualViperXTask):
+class InsertionTask(BimanualStompyTask):
     def __init__(self, random=None):
         super().__init__(random=random)
         self.max_reward = 4

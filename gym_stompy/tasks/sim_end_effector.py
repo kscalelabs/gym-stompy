@@ -31,7 +31,7 @@ Observation space: {"qpos": Concat[ left_arm_qpos (6),         # absolute joint 
 """
 
 
-class BimanualViperXEndEffectorTask(base.Task):
+class BimanualStompyEndEffectorTask(base.Task):
     def __init__(self, random=None):
         super().__init__(random=random)
 
@@ -136,7 +136,7 @@ class BimanualViperXEndEffectorTask(base.Task):
         raise NotImplementedError
 
 
-class TransferCubeEndEffectorTask(BimanualViperXEndEffectorTask):
+class TransferCubeEndEffectorTask(BimanualStompyEndEffectorTask):
     def __init__(self, random=None):
         super().__init__(random=random)
         self.max_reward = 4
@@ -184,7 +184,7 @@ class TransferCubeEndEffectorTask(BimanualViperXEndEffectorTask):
         return reward
 
 
-class InsertionEndEffectorTask(BimanualViperXEndEffectorTask):
+class InsertionEndEffectorTask(BimanualStompyEndEffectorTask):
     def __init__(self, random=None):
         super().__init__(random=random)
         self.max_reward = 4

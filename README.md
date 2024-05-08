@@ -7,8 +7,16 @@ A gym environment for Stompy
 Create a virtual environment with Python 3.10 and activate it, e.g. with [`miniconda`](https://docs.anaconda.com/free/miniconda/index.html):
 
 ```bash
+git clone https://github.com/kscalelabs/gym-stompy.git && cd gym-stompy
 conda create -y -n stompy python=3.10 && conda activate stompy
-cd gym-stompy && pip install -e .
+pip install -e .
+```
+
+Verify by running tests
+
+```
+pip install pytest
+pytest tests/test_env.py
 ```
 
 ## Quickstart
