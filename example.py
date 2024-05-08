@@ -3,7 +3,7 @@ import gymnasium as gym
 import numpy as np
 import gym_stompy
 
-env = gym.make("gym_stompy/StompyWalking-v0")
+env = gym.make("gym_stompy/StompyInsertion-v0")
 observation, info = env.reset()
 frames = []
 

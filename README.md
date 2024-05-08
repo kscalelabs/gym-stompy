@@ -2,22 +2,14 @@
 
 A gym environment for Stompy
 
-<!-- <img src="http://remicadene.com/assets/gif/aloha_act.gif" width="50%" alt="ACT policy on ALOHA env"/> -->
-
 ## Installation
 
 Create a virtual environment with Python 3.10 and activate it, e.g. with [`miniconda`](https://docs.anaconda.com/free/miniconda/index.html):
 
 ```bash
-conda create -y -n aloha python=3.10 && conda activate aloha
+conda create -y -n stompy python=3.10 && conda activate stompy
+cd gym-stompy && pip install -e .
 ```
-
-Install `gym-stompy`:
-
-```bash
-pip install gym-stompy
-```
-
 
 ## Quickstart
 
@@ -28,7 +20,7 @@ import gymnasium as gym
 import numpy as np
 import gym_stompy
 
-env = gym.make("gym_stompy/AlohaInsertion-v0")
+env = gym.make("gym_stompy/StompyInsertion-v0")
 observation, info = env.reset()
 frames = []
 
@@ -47,7 +39,7 @@ imageio.mimsave("example.mp4", np.stack(frames), fps=25)
 
 
 ## Description
-Aloha environment.
+Stompy environment.
 
 Two tasks are available:
 - TransferCubeTask: The right arm needs to first pick up the red cube lying on the table, then place it inside the gripper of the other arm.
@@ -87,10 +79,10 @@ The arms and the items (block, peg, socket) start at a random position and angle
 
 ```python
 >>> import gymnasium as gym
->>> import gym_aloha
->>> env = gym.make("gym_aloha/AlohaInsertion-v0", obs_type="pixels", render_mode="rgb_array")
+>>> import gym_stompy
+>>> env = gym.make("gym_stompy/StompyInsertion-v0", obs_type="pixels", render_mode="rgb_array")
 >>> env
-<TimeLimit<OrderEnforcing<PassiveEnvChecker<AlohaEnv<gym_aloha/AlohaInsertion-v0>>>>>
+<TimeLimit<OrderEnforcing<PassiveEnvChecker<StompyEnv<gym_stompy/StompyInsertion-v0>>>>>
 ```
 
 * `obs_type`: (str) The observation type. Can be either `pixels` or `pixels_agent_pos`. Default is `pixels`.
@@ -130,4 +122,4 @@ pre-commit
 
 ## Acknowledgment
 
-gym-aloha is adapted from [ALOHA](https://tonyzhaozh.github.io/aloha/)
+gym-stompy is adapted from [gym-aloha](https://github.com/huggingface/gym-aloha) which is adapted from [ALOHA](https://tonyzhaozh.github.io/stompy/)

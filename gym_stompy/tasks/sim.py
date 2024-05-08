@@ -3,7 +3,7 @@ import collections
 import numpy as np
 from dm_control.suite import base
 
-from gym_aloha.constants import (
+from gym_stompy.constants import (
     START_ARM_POSE,
     normalize_puppet_gripper_position,
     normalize_puppet_gripper_velocity,
