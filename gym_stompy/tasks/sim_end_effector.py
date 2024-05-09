@@ -60,8 +60,8 @@ class BimanualStompyEndEffectorTask(base.Task):
         # reset mocap to align with end effector
         # to obtain these numbers:
         # (1) make an ee_sim env and reset to the same start_pose
-        # (2) get env._physics.named.data.xpos['vx300s_left/gripper_link']
-        #     get env._physics.named.data.xquat['vx300s_left/gripper_link']
+        # (2) get env._physics.named.data.xpos['stompy_left/gripper_link']
+        #     get env._physics.named.data.xquat['stompy_left/gripper_link']
         #     repeat the same for right side
         np.copyto(physics.data.mocap_pos[0], [-0.31718881, 0.5, 0.29525084])
         np.copyto(physics.data.mocap_quat[0], [1, 0, 0, 0])
@@ -168,8 +168,8 @@ class TransferCubeEndEffectorTask(BimanualStompyEndEffectorTask):
             contact_pair = (name_geom_1, name_geom_2)
             all_contact_pairs.append(contact_pair)
 
-        touch_left_gripper = ("red_box", "vx300s_left/10_left_gripper_finger") in all_contact_pairs
-        touch_right_gripper = ("red_box", "vx300s_right/10_right_gripper_finger") in all_contact_pairs
+        touch_left_gripper = ("red_box", "stompy_left/10_left_gripper_finger") in all_contact_pairs
+        touch_right_gripper = ("red_box", "stompy_right/10_right_gripper_finger") in all_contact_pairs
         touch_table = ("red_box", "table") in all_contact_pairs
 
         reward = 0
@@ -226,12 +226,12 @@ class InsertionEndEffectorTask(BimanualStompyEndEffectorTask):
             contact_pair = (name_geom_1, name_geom_2)
             all_contact_pairs.append(contact_pair)
 
-        touch_right_gripper = ("red_peg", "vx300s_right/10_right_gripper_finger") in all_contact_pairs
+        touch_right_gripper = ("red_peg", "stompy_right/10_right_gripper_finger") in all_contact_pairs
         touch_left_gripper = (
-            ("socket-1", "vx300s_left/10_left_gripper_finger") in all_contact_pairs
-            or ("socket-2", "vx300s_left/10_left_gripper_finger") in all_contact_pairs
-            or ("socket-3", "vx300s_left/10_left_gripper_finger") in all_contact_pairs
-            or ("socket-4", "vx300s_left/10_left_gripper_finger") in all_contact_pairs
+            ("socket-1", "stompy_left/10_left_gripper_finger") in all_contact_pairs
+            or ("socket-2", "stompy_left/10_left_gripper_finger") in all_contact_pairs
+            or ("socket-3", "stompy_left/10_left_gripper_finger") in all_contact_pairs
+            or ("socket-4", "stompy_left/10_left_gripper_finger") in all_contact_pairs
         )
 
         peg_touch_table = ("red_peg", "table") in all_contact_pairs

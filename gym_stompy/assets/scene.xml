@@ -29,7 +29,7 @@
         <camera name="right_pillar" pos="0.5 0.2 0.6" fovy="78" mode="targetbody" target="table"/>
         <camera name="top" pos="0 0.6 0.8" fovy="78" mode="targetbody" target="table"/>
         <camera name="angle" pos="0 0 0.6" fovy="78" mode="targetbody" target="table"/>
-        <camera name="front_close" pos="0 0.2 0.4" fovy="78" mode="targetbody" target="vx300s_left/camera_focus"/>
+        <camera name="front_close" pos="0 0.2 0.4" fovy="78" mode="targetbody" target="stompy_left/camera_focus"/>
 
     </worldbody>
 
