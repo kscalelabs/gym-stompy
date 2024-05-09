@@ -44,11 +44,15 @@ class StompyEnv(gym.Env):
         self._env = self._make_env_task(self.task)
 
         if self.obs_type == "state":
-            raise NotImplementedError()
-            self.observation_space = spaces.Box(
-                low=np.array([0] * len(JOINTS)),  # ???
-                high=np.array([255] * len(JOINTS)),  # ???
-                dtype=np.float64,
+            self.observation_space = spaces.Dict(
+                {
+                    "agent_pos": spaces.Box(
+                        low=-1000.0,
+                        high=1000.0,
+                        shape=(len(JOINTS),),
+                        dtype=np.float64,
+                    ),
+                }
             )
         elif self.obs_type == "pixels":
             self.observation_space = spaces.Dict(
@@ -137,7 +141,7 @@ class StompyEnv(gym.Env):
 
     def _format_raw_obs(self, raw_obs):
         if self.obs_type == "state":
-            raise NotImplementedError()
+            obs = {"agent_pos": raw_obs["qpos"]}
         elif self.obs_type == "pixels":
             obs = {"top": raw_obs["images"]["top"].copy()}
         elif self.obs_type == "pixels_agent_pos":

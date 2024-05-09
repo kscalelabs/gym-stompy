@@ -4,26 +4,31 @@ from pathlib import Path
 DT = 0.02  # 0.02 ms -> 1/0.2 = 50 hz
 FPS = 50
 
+# NOTE: must be absolute path
+ASSETS_DIR = Path(__file__).parent.resolve() / "assets" / "urdf" / "stompy_tiny"
 
 JOINTS = [
-    # absolute joint position
-    "left_arm_waist",
-    "left_arm_shoulder",
-    "left_arm_elbow",
-    "left_arm_forearm_roll",
-    "left_arm_wrist_angle",
-    "left_arm_wrist_rotate",
-    # normalized gripper position 0: close, 1: open
-    "left_arm_gripper",
-    # absolute joint position
-    "right_arm_waist",
-    "right_arm_shoulder",
-    "right_arm_elbow",
-    "right_arm_forearm_roll",
-    "right_arm_wrist_angle",
-    "right_arm_wrist_rotate",
-    # normalized gripper position 0: close, 1: open
-    "right_arm_gripper",
+    "joint_head_1_x4_1_dof_x4",
+    "joint_head_1_x4_2_dof_x4",
+    "joint_right_arm_1_x8_1_dof_x8",
+    "joint_right_arm_1_x8_2_dof_x8",
+    "joint_right_arm_1_x6_1_dof_x6",
+    "joint_right_arm_1_x6_2_dof_x6",
+    "joint_right_arm_1_x4_1_dof_x4",
+    "joint_right_arm_1_hand_1_x4_1_dof_x4",
+    "joint_right_arm_1_hand_1_slider_1",
+    "joint_right_arm_1_hand_1_slider_2",
+    "joint_right_arm_1_hand_1_x4_2_dof_x4",
+    "joint_left_arm_2_x8_1_dof_x8",
+    "joint_left_arm_2_x8_2_dof_x8",
+    "joint_left_arm_2_x6_1_dof_x6",
+    "joint_left_arm_2_x6_2_dof_x6",
+    "joint_left_arm_2_x4_1_dof_x4",
+    "joint_left_arm_2_hand_1_x4_1_dof_x4",
+    "joint_left_arm_2_hand_1_slider_1",
+    "joint_left_arm_2_hand_1_slider_2",
+    "joint_left_arm_2_hand_1_x4_2_dof_x4",
+    "joint_torso_1_x8_1_dof_x8",
 ]
 
 ACTIONS = [
@@ -46,27 +51,31 @@ ACTIONS = [
     "right_arm_gripper",
 ]
 
-
 START_ARM_POSE = [
-    0,
-    -0.96,
-    1.16,
-    0,
-    -0.3,
-    0,
-    0.02239,
-    -0.02239,
-    0,
-    -0.96,
-    1.16,
-    0,
-    -0.3,
-    0,
-    0.02239,
-    -0.02239,
+    -1.0,
+    0.0,
+    # right arm (6dof)
+    1.7,
+    1.6,
+    0.34,
+    1.6,
+    1.4,
+    -0.26,
+    # left arm (6dof)
+     -1.7,
+     -1.6,
+     -0.34,
+     -1.6,
+     -1.4,
+     -1.7,
+    # right hand (2dof)
+    0.0,
+    0.0,
+    # left hand (2dof)
+    0.0,
+    0.0,
 ]
 
-ASSETS_DIR = Path(__file__).parent.resolve() / "assets"  # note: absolute path
 
 # Left finger position limits (qpos[7]), right_finger = -1 * left_finger
 MASTER_GRIPPER_POSITION_OPEN = 0.02417
