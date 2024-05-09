@@ -6,8 +6,10 @@
 # Data
 *.mp4
 
-# urdf files
+# robot assets
 urdf/
+robot_mjcf/
+meshes/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
