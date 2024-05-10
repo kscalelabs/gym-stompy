@@ -12,6 +12,10 @@ from gym_stompy.constants import (
 
 BOX_POSE = [None]  # to be changed from outside
 
+# TODO: Consider wrappers to simplify some of this code e.g. action/observation normalization
+# https://gymnasium.farama.org/api/wrappers/action_wrappers/
+# https://gymnasium.farama.org/api/wrappers/observation_wrappers/
+
 """
 Environment for simulated robot bi-manual manipulation, with joint position control
 Action space:      [left_arm_qpos (6),             # absolute joint position

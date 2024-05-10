@@ -43,6 +43,7 @@ class StompyEnv(gym.Env):
 
         self._env = self._make_env_task(self.task)
 
+        # https://gymnasium.farama.org/content/basic_usage/#action-and-observation-spaces
         if self.obs_type == "state":
             self.observation_space = spaces.Dict(
                 {
