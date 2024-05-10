@@ -34,7 +34,8 @@ Observation space: {"qpos": Concat[ left_arm_qpos (6),         # absolute joint 
                     "images": {"main": (480x640x3)}        # h, w, c, dtype='uint8'
 """
 
-
+# https://github.com/google-deepmind/dm_control/blob/main/dm_control/suite/base.py
+# https://github.com/google-deepmind/dm_control/blob/main/dm_control/rl/control.py#L274
 class BimanualStompyTask(base.Task):
     def __init__(self, random=None):
         super().__init__(random=random)
