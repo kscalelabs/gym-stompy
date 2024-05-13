@@ -1,7 +1,9 @@
 
 <mujocoinclude>
-    <body name="stompy_left" pos="-0.469 0.5 0">
-    <body name="link_left_arm_2_x8_1_inner_1" pos="0.0766657 0.032495 -0.00791584" quat="0.379928 -0.596368 -0.596368 0.379928">
+    <!-- <body name="stompy_left" pos="-0.469 0.5 0" euler="0 0 0"> -->
+    <body name="stompy_left" pos="-0.5 0.5 0" euler="0 3.1416 0">
+    <!-- <body name="link_left_arm_2_x8_1_inner_1" pos="0.0766657 0.032495 -0.00791584" quat="0.379928 -0.596368 -0.596368 0.379928"> -->
+      <body name="link_left_arm_2_x8_1_inner_1">
         <joint name="joint_left_arm_2_x8_1_dof_x8" pos="0 0 0" axis="0 0 1" limited="true"  range="-1.5708 1.5708"  />
         <geom type="mesh" rgba="0.972549 0.529412 0.00392157 0.501961" mesh="left_arm_2_x8_1_inner_1" />
         <geom pos="0 0.0155 -0.033" quat="-2.32051e-08 1 0 0" type="mesh" rgba="0.917647 0.917647 0.917647 0.501961" mesh="left_arm_2_shoulder_inner_1" />

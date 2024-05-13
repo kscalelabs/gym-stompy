@@ -60,6 +60,12 @@ class StompyEnv(gym.Env):
                         shape=(self.observation_height, self.observation_width, 3),
                         dtype=np.uint8,
                     )
+                    # "angle": spaces.Box(
+                    #     low=0,
+                    #     high=255,
+                    #     shape=(self.observation_height, self.observation_width, 3),
+                    #     dtype=np.uint8,
+                    # )
                 }
             )
         elif self.obs_type == "pixels_agent_pos":
@@ -73,6 +79,12 @@ class StompyEnv(gym.Env):
                                 shape=(self.observation_height, self.observation_width, 3),
                                 dtype=np.uint8,
                             )
+                            # "angle": spaces.Box(
+                            #     low=0,
+                            #     high=255,
+                            #     shape=(self.observation_height, self.observation_width, 3),
+                            #     dtype=np.uint8,
+                            # )
                         }
                     ),
                     "agent_pos": spaces.Box(
@@ -104,6 +116,7 @@ class StompyEnv(gym.Env):
         #     raise ValueError(mode)
         # TODO(rcadene): render and visualizer several cameras (e.g. angle, front_close)
         image = self._env.physics.render(height=height, width=width, camera_id="top")
+        # image = self._env.physics.render(height=height, width=width, camera_id="angle")
         return image
 
     def _make_env_task(self, task_name):
@@ -142,10 +155,16 @@ class StompyEnv(gym.Env):
         if self.obs_type == "state":
             obs = {"agent_pos": raw_obs["qpos"]}
         elif self.obs_type == "pixels":
-            obs = {"top": raw_obs["images"]["top"].copy()}
+            obs = {
+                "top": raw_obs["images"]["top"].copy()
+                # "angle": raw_obs["images"]["top"].copy()
+            }
         elif self.obs_type == "pixels_agent_pos":
             obs = {
-                "pixels": {"top": raw_obs["images"]["top"].copy()},
+                "pixels": {
+                    "top": raw_obs["images"]["top"].copy()
+                    # "angle": raw_obs["images"]["top"].copy()
+                },
                 "agent_pos": raw_obs["qpos"],
             }
         return obs
