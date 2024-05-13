@@ -57,6 +57,11 @@
                     <geom pos="-0.00499 -0.01 -0.033" quat="-1.64085e-08 -0.707107 1.64085e-08 -0.707107" type="mesh" rgba="0.647059 0.647059 0.647059 0.501961" mesh="right_arm_1_hand_1_rack_1" />
                     <geom pos="-0.04949 0.01 -0.033" quat="-1.64085e-08 -0.707107 1.64085e-08 -0.707107" type="mesh" rgba="0.647059 0.647059 0.647059 0.501961" mesh="right_arm_1_hand_1_gripper_2" />
                   </body>
+                  <!-- <body name="link_right_arm_1_hand_1_x4_2_inner_1" pos="0.0489455 -0.035561 -0.014" quat="-0.32102 -0.32102 0.630037 0.630037">
+                    <joint name="joint_right_arm_1_hand_1_x4_2_dof_x4" pos="0 0 0" axis="0 0 1" limited="true" range="-3.14159 3.14159"  />
+                    <geom type="mesh" rgba="0.972549 0.529412 0.00392157 0.501961" mesh="right_arm_1_hand_1_x4_2_inner_1" />
+                    <geom pos="0.0105058 0.00467747 -0.0345" quat="0.544639 0 0 0.838671" type="mesh" rgba="0.615686 0.811765 0.929412 0.501961" mesh="right_arm_1_hand_1_spur_gear_(26_teeth)_1" />
+                  </body> -->
                 </body>
               </body>
             </body>

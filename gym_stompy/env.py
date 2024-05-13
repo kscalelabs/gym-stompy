@@ -45,15 +45,11 @@ class StompyEnv(gym.Env):
 
         # https://gymnasium.farama.org/content/basic_usage/#action-and-observation-spaces
         if self.obs_type == "state":
-            self.observation_space = spaces.Dict(
-                {
-                    "agent_pos": spaces.Box(
-                        low=-1000.0,
-                        high=1000.0,
-                        shape=(len(JOINTS),),
-                        dtype=np.float64,
-                    ),
-                }
+            raise NotImplementedError()
+            self.observation_space = spaces.Box(
+                low=np.array([0] * len(JOINTS)),  # ???
+                high=np.array([255] * len(JOINTS)),  # ???
+                dtype=np.float64,
             )
         elif self.obs_type == "pixels":
             self.observation_space = spaces.Dict(
