@@ -67,6 +67,7 @@ class BimanualStompyTask(base.Task):
         qpos_raw = physics.data.qpos.copy()
         left_qpos_raw = qpos_raw[:8]
         right_qpos_raw = qpos_raw[8:16]
+        # last two are sliders
         left_arm_qpos = left_qpos_raw[:6]
         right_arm_qpos = right_qpos_raw[:6]
         left_gripper_qpos = [normalize_puppet_gripper_position(left_qpos_raw[6])]

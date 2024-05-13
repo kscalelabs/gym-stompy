@@ -30,7 +30,7 @@ import gym_stompy
 
 env = gym.make("gym_stompy/StompyInsertion-v0")
 observation, info = env.reset()
-frames = []
+frames = []viperx
 
 for _ in range(1000):
     action = env.action_space.sample()

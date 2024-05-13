@@ -5,7 +5,7 @@ DT = 0.02  # 0.02 ms -> 1/0.2 = 50 hz
 FPS = 50
 
 # NOTE: must be absolute path
-ASSETS_DIR = Path(__file__).parent.resolve() / "assets" / "urdf" / "stompy_tiny"
+ASSETS_DIR = Path(__file__).parent.resolve() / "assets"
 
 JOINTS = [
     "joint_head_1_x4_1_dof_x4",

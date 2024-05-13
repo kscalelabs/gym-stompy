@@ -43,11 +43,11 @@
     </worldbody>
 
     <actuator>
-        <position ctrllimited="true" ctrlrange="0.021 0.057" joint="joint_left_arm_2_hand_1_slider_1" kp="200"  user="1"/>
-        <position ctrllimited="true" ctrlrange="-0.057 -0.021" joint="joint_left_arm_2_hand_1_slider_2" kp="200"  user="1"/>
+        <position ctrllimited="true" ctrlrange="-0.034 0.0" joint="joint_left_arm_2_hand_1_slider_1" kp="200"  user="1"/>
+        <position ctrllimited="true" ctrlrange="-0.034 0.0" joint="joint_left_arm_2_hand_1_slider_2" kp="200"  user="1"/>
 
-        <position ctrllimited="true" ctrlrange="0.021 0.057" joint="joint_right_arm_1_hand_1_slider_1" kp="200"  user="1"/>
-        <position ctrllimited="true" ctrlrange="-0.057 -0.021" joint="joint_right_arm_1_hand_1_slider_2" kp="200"  user="1"/>
+        <position ctrllimited="true" ctrlrange="-0.034 0.0" joint="joint_right_arm_1_hand_1_slider_1" kp="200"  user="1"/>
+        <position ctrllimited="true" ctrlrange="-0.034 0.0" joint="joint_right_arm_1_hand_1_slider_2" kp="200"  user="1"/>
 
     </actuator>
 

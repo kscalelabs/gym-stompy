@@ -33,7 +33,6 @@
         <position ctrllimited="true" ctrlrange="-2.61799 0.523599" joint="joint_left_arm_2_hand_1_x4_1_dof_x4" kp="50"  user="1"/>
         <position ctrllimited="true" ctrlrange="-0.034 0" joint="joint_left_arm_2_hand_1_slider_1" kp="20"  user="1"/>
         <position ctrllimited="true" ctrlrange="-0.034 0" joint="joint_left_arm_2_hand_1_slider_2" kp="200"  user="1"/>
-        <position ctrllimited="true" ctrlrange="-3.14159 3.14159" joint="joint_left_arm_2_hand_1_x4_2_dof_x4" kp="200"  user="1"/>
         
         <position ctrllimited="true" ctrlrange="-2.0944 2.0944" joint="joint_right_arm_1_x8_1_dof_x8" kp="800"  user="1" forcelimited="true" forcerange="-150 150"/>
         <position ctrllimited="true" ctrlrange="0 1.91986" joint="joint_right_arm_1_x8_2_dof_x8" kp="1600"  user="1" forcelimited="true" forcerange="-300 300"/>
@@ -43,7 +42,6 @@
         <position ctrllimited="true" ctrlrange="-2.61799 0.523599" joint="joint_right_arm_1_hand_1_x4_1_dof_x4" kp="50"  user="1"/>
         <position ctrllimited="true" ctrlrange="-0.034 0" joint="joint_right_arm_1_hand_1_slider_1" kp="20"  user="1"/>
         <position ctrllimited="true" ctrlrange="-0.034 0" joint="joint_right_arm_1_hand_1_slider_2" kp="200"  user="1"/>
-        <position ctrllimited="true" ctrlrange="-3.14159 3.14159" joint="joint_right_arm_1_hand_1_x4_2_dof_x4" kp="200"  user="1"/>
     </actuator>
 
     <keyframe>

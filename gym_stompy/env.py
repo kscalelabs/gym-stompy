@@ -115,21 +115,23 @@ class StompyEnv(gym.Env):
         time_limit = float("inf")
 
         if "transfer_cube" in task_name:
-            xml_path = ASSETS_DIR / "bimanual_viperx_transfer_cube.xml"
+            # xml_path = ASSETS_DIR / "bimanual_viperx_transfer_cube.xml"
+            xml_path = ASSETS_DIR / "bimanual_stompy_transfer_cube.xml"
             physics = mujoco.Physics.from_xml_path(str(xml_path))
             task = TransferCubeTask()
         elif "insertion" in task_name:
-            xml_path = ASSETS_DIR / "bimanual_viperx_insertion.xml"
+            # xml_path = ASSETS_DIR / "bimanual_viperx_insertion.xml"
+            xml_path = ASSETS_DIR / "bimanual_stompy_insertion.xml"
             physics = mujoco.Physics.from_xml_path(str(xml_path))
             task = InsertionTask()
         elif "end_effector_transfer_cube" in task_name:
             raise NotImplementedError()
-            xml_path = ASSETS_DIR / "bimanual_viperx_end_effector_transfer_cube.xml"
+            xml_path = ASSETS_DIR / "bimanual_stompy_end_effector_transfer_cube.xml"
             physics = mujoco.Physics.from_xml_path(str(xml_path))
             task = TransferCubeEndEffectorTask()
         elif "end_effector_insertion" in task_name:
             raise NotImplementedError()
-            xml_path = ASSETS_DIR / "bimanual_viperx_end_effector_insertion.xml"
+            xml_path = ASSETS_DIR / "bimanual_stompy_end_effector_insertion.xml"
             physics = mujoco.Physics.from_xml_path(str(xml_path))
             task = InsertionEndEffectorTask()
         else:
